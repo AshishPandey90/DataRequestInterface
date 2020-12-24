@@ -1,0 +1,158 @@
+
+<div class="row justify-content-center" style="padding-top: 10%; padding-bottom: 5%;">
+  <div class="align-self-center col col-12 col-sm-12 col-md-8 ">
+      <div class="card">
+         <h4 class="card-header">Request data form of <strong> {{curr_User}} </strong></h4>
+          <div class="card-body">
+               <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                         <div *ngIf="f.email.errors.required">Email is required</div>
+                     </div>
+                     </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                          <div *ngIf="f.password.errors.required">Password is required</div>
+                        </div>
+                    </div>
+                    <br>
+                    <mat-divider></mat-divider>
+                    <mat-divider></mat-divider>
+                    <br>
+                    <div class="form-group">
+                      <label for="datasource">Potential Data Source</label>
+                      <br>
+                      <input type="radio" value='first' formControlName="datasource" [ngClass]="{ 'is-invalid': submitted && f.datasource.errors }"> MU Health Care Population
+                      <br>
+                      <input type="radio" value='second' formControlName="datasource"> Health Facts
+                      <br>
+                      <input type="radio" value='third' formControlName="datasource"> Greater Plains Collaborative
+                      <br>
+                      <input type="radio" value='fourth' formControlName="datasource"> MU Health Care PCORNET CDM
+                      <br>
+                      <input type="radio" value='fifth' formControlName="datasource"> GPC DROC Request
+                      <div *ngIf="submitted && f.datasource.errors" class="invalid-feedback">
+                          <div *ngIf="f.datasource.errors.required">Data source is required</div>
+                      </div>
+                    </div>
+                    <br>
+                    <mat-divider></mat-divider>
+                    <mat-divider></mat-divider>
+                    <br>
+                    <div class="form-group">
+                      <label for="name">Full Name</label>
+                      <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                      <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                          <div *ngIf="f.name.errors.required">Name is required</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="pawprint">Requester's PawPrint</label>
+                      <input type="text" formControlName="pawprint" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pawprint.errors }" />
+                      <div *ngIf="submitted && f.pawprint.errors" class="invalid-feedback">
+                          <div *ngIf="f.pawprint.errors.required">Pawprint is required</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="department">Requester's MU Department</label>
+                      <input type="text" formControlName="department" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.department.errors }" />
+                      <div *ngIf="submitted && f.department.errors" class="invalid-feedback">
+                          <div *ngIf="f.department.errors.required">Department is required</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="role">Requester's is </label>
+                      <input type="text" formControlName="role" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.role.errors }" />
+                      <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+                          <div *ngIf="f.role.errors.required">Role is required</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="pi">Primery Investigator</label>
+                      <input type="text" formControlName="pi" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pi.errors }" />
+                      <div *ngIf="submitted && f.pi.errors" class="invalid-feedback">
+                          <div *ngIf="f.pi.errors.required">Field is required</div>
+                      </div>
+                    </div>
+                    <br>
+                    <mat-divider></mat-divider>
+                    <mat-divider></mat-divider>
+                    <br>
+                    <div class="form-group">
+                      <label for="protitle">Project Title</label>
+                      <input type="text" formControlName="protitle" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.protitle.errors }" />
+                      <div *ngIf="submitted && f.protitle.errors" class="invalid-feedback">
+                          <div *ngIf="f.protitle.errors.required">Field is required</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="prodesc">Project Description</label>
+                      <input type="text" formControlName="prodesc" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.prodesc.errors }" />
+                      <div *ngIf="submitted && f.prodesc.errors" class="invalid-feedback">
+                          <div *ngIf="f.prodesc.errors.required">Field is required</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="funding">Funding</label>
+                      <input type="text" formControlName="funding" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.funding.errors }" />
+                      <div *ngIf="submitted && f.funding.errors" class="invalid-feedback">
+                          <div *ngIf="f.funding.errors.required">Field is required</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="datatype">Type of Data</label>
+                      <br>
+                      <input type="radio" value='first' formControlName="datatype" [ngClass]="{ 'is-invalid': submitted && f.datatype.errors }"> De-identified Aggregated data (Patient Counts)
+                      <br>
+                      <input type="radio" value='second' formControlName="datatype"> De-identified Patient Data
+                      <br>
+                      <input type="radio" value='third' formControlName="datatype"> Limited Data
+                      <br>
+                      <input type="radio" value='fourth' formControlName="datatype"> Identified Data
+                      <br>
+                      <div *ngIf="submitted && f.datatype.errors" class="invalid-feedback">
+                        <div *ngIf="f.datatype.errors.required">Field is required</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="irb">Do you have an IRB</label>
+                      <input type="text" formControlName="irb" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.irb.errors }" />
+                      <div *ngIf="submitted && f.irb.errors" class="invalid-feedback">
+                          <div *ngIf="f.irb.errors.required">Field is required</div>
+                      </div>
+                    </div>
+                </form>
+                <form [formGroup]="fillroles" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                    <label for="arole">Roles Assigned</label>
+                    <br>
+                    <input type="radio" value='first' formControlName="arole" [ngClass]="{ 'is-invalid': submitted && f.arole.errors }"> All Data
+                    <br>
+                    <input type="radio" value='second' formControlName="arole"> KnowCovid-19 Data
+                    <br>
+                    <input type="radio" value='third' formControlName="arole"> Patient Basic
+                    <br>
+                    <input type="radio" value='fourth' formControlName="arole"> Patient Detailed
+                    <br>
+                    <div *ngIf="submitted && f.arole.errors" class="invalid-feedback">
+                      <div *ngIf="f.arole.errors.required">Field is required</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <button [disabled]="loading" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                        Autheticate User
+                    </button>
+                    <a class="btn btn-link">Notify requester</a>
+                  </div>
+                </form>
+            </div>
+        </div>
+  </div>
+</div>

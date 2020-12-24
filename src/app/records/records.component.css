@@ -1,0 +1,11 @@
+table {
+  width: 100%;
+}
+
+
+
+.mat-header-cell {
+  background-color: #946cb3;
+  font: bold;
+  font-size: large;
+}

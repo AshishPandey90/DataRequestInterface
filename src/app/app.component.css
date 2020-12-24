@@ -1,0 +1,15 @@
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
+    background-color: #f8f6fa;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: medium;
+}
+
+img{
+  margin:0 auto;
+  width: 1.5em;
+  height: 1.5em;
+}
