@@ -1,5 +1,7 @@
 # Data Request Interface
 
+Used MEAN stack ( MongoDB, Express, Angular, NodeJS ) to develop web interface for CRUD data operations on RedShift and MongoDB database server.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.  
 It used and customized some angular components such as tables and forms to generate the frontend interface.  
 
