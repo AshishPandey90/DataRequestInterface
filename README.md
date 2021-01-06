@@ -7,7 +7,9 @@ It used and customized some angular components such as tables and forms to gener
 
 ![](Capture.PNG)  
 
-![](Capture_1.PNG)
+![](Capture_1.PNG)  
+
+![](Capture_2.PNG)
 
 ## Development server
 
