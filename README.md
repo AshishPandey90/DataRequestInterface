@@ -5,11 +5,12 @@ Used MEAN stack ( MongoDB, Express, Angular, NodeJS ) to develop web interface f
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.  
 It used and customized some angular components such as tables and forms to generate the frontend interface.  
 
+![](Capture_2.PNG)
+
 ![](Capture.PNG)  
 
 ![](Capture_1.PNG)  
 
-![](Capture_2.PNG)
 
 ## Development server
 
