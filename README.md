@@ -3,7 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.  
 It used and customized some angular components such as tables and forms to generate the frontend interface.  
 
-![](Images/interface.PNG)
+![](Capture.PNG)  
+
+![](Capture_1.PNG)
 
 ## Development server
 
